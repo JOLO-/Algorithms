@@ -36,7 +36,7 @@ public class WeightedQuickUnionUF {
      * Initializes an empty union-find data structure with N isolated components 0 through N-1.
      *
      * @param N the number of objects
-     * @throws java.lang.IllegalArgumentException if N < 0
+     * @throws IllegalArgumentException if N < 0
      */
     public WeightedQuickUnionUF(int N) {
         count = N;
@@ -62,7 +62,7 @@ public class WeightedQuickUnionUF {
      *
      * @param p the integer representing one site
      * @return the component identifier for the component containing site <tt>p</tt>
-     * @throws java.lang.IndexOutOfBoundsException unless 0 <= p < N
+     * @throws IndexOutOfBoundsException unless 0 <= p < N
      */
     public int find(int p) {
         while (p != id[p])
@@ -77,7 +77,7 @@ public class WeightedQuickUnionUF {
      * @param q the integer representing the other site
      * @return <tt>true</tt> if the two sites <tt>p</tt> and <tt>q</tt>
      * are in the same component, and <tt>false</tt> otherwise
-     * @throws java.lang.IndexOutOfBoundsException unless both 0 <= p < N and 0 <= q < N
+     * @throws IndexOutOfBoundsException unless both 0 <= p < N and 0 <= q < N
      */
     public boolean connected(int p, int q) {
         return find(p) == find(q);
@@ -90,7 +90,7 @@ public class WeightedQuickUnionUF {
      *
      * @param p the integer representing one site
      * @param q the integer representing the other site
-     * @throws java.lang.IndexOutOfBoundsException unless both 0 <= p < N and 0 <= q < N
+     * @throws IndexOutOfBoundsException unless both 0 <= p < N and 0 <= q < N
      */
     public void union(int p, int q) {
         int rootP = find(p);

@@ -11,13 +11,14 @@ public class ThreeWayQuickSort implements SortAlgorithm {
     @Override
     public <T extends Comparable<T>> void sort(T[] arr) {
         Utils.shuffle(arr);
-
+        qSort(arr, 0, arr.length - 1);
     }
 
     @Override
     public String getName() { return NAME; }
 
     private  <T extends Comparable<T>> void qSort(T[] arr, int lo, int hi) {
+        if (lo >= hi) return;
         int[] res = sort(arr, lo, hi);
         int hi1 = res[0];
         int lo2 = res[1];
@@ -29,14 +30,14 @@ public class ThreeWayQuickSort implements SortAlgorithm {
         int lt = lo;
         int i = lo + 1;
         int gt = hi;
-        while (i < gt) {
+        while (i <= gt) {
             if (arr[lt].compareTo(arr[i]) > 0) {
                 Utils.swap(arr, lt++, i++);
-            } else if (arr[lt].compareTo(arr[i]) == 0) {
-                i++;
             } else if (arr[i].compareTo(arr[gt]) > 0) {
                 Utils.swap(arr, i, gt--);
-            } else if (arr[i].compareTo(arr[gt]) < 0) {
+            } else if (arr[lt].compareTo(arr[i]) == 0) {
+                i++;
+            } else {
                 gt--;
             }
         }

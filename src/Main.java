@@ -2,6 +2,7 @@ import inserionsort.InsertionSort;
 import mergesort.BottomUpMergeSort;
 import mergesort.TopDownMergeSort;
 import quicksort.QuickSort;
+import quicksort.ThreeWayQuickSort;
 import selectionsort.SelectionSort;
 import shellsort.ShellSort;
 
@@ -21,5 +22,6 @@ public class Main {
         new TopDownMergeSortTest(new TopDownMergeSort()).test();
 //        new BottomUpMergeSortTest(new BottomUpMergeSort()).test();
         new QuickSortTest(new QuickSort()).test();
+        new ThreeWayQuickSort.ThreeWayQuickSortTest(new ThreeWayQuickSort()).test();
     }
 }

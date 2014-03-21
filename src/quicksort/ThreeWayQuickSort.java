@@ -46,13 +46,6 @@ public class ThreeWayQuickSort implements SortAlgorithm {
         return new int[] {lt, gt};
     }
 
-    public static void main(String[] args) {
-        Integer[] arr = {50, 92, 92, 79, 71, 80, 49, 52, 85, 2, 38, 98, 91, 40, 10, 13, 28};
-        new ThreeWayQuickSort().sort(arr);
-        String s = Arrays.toString(arr);
-        System.out.println(s);
-    }
-
     public static class ThreeWayQuickSortTest extends SortTestBase {
 
         public ThreeWayQuickSortTest(SortAlgorithm sortAlgorithm) {

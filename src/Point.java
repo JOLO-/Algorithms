@@ -1,5 +1,3 @@
-package week3.patternrecognition;
-
 import java.util.Comparator;
 
 public class Point implements Comparable<Point> {

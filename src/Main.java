@@ -20,7 +20,7 @@ public class Main {
         new InsertionSortTest(new InsertionSort()).test();
         new ShellSortTest(new ShellSort()).test();
         new TopDownMergeSortTest(new TopDownMergeSort()).test();
-//        new BottomUpMergeSortTest(new BottomUpMergeSort()).test();
+//        new BottomUpMergeSortTest(new BottomUpMergeSort()).test(); //TODO: fix algorithm
         new QuickSortTest(new QuickSort()).test();
         new ThreeWayQuickSort.ThreeWayQuickSortTest(new ThreeWayQuickSort()).test();
     }

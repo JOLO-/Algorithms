@@ -4,6 +4,8 @@ import core.SortAlgorithm;
 import core.SortTestBase;
 import core.Utils;
 
+import java.util.Arrays;
+
 public class ThreeWayQuickSort implements SortAlgorithm {
 
     public static final String NAME ="Three Way Quick Sort";
@@ -41,7 +43,14 @@ public class ThreeWayQuickSort implements SortAlgorithm {
                 gt--;
             }
         }
-        return new int[] {lt, i};
+        return new int[] {lt, gt};
+    }
+
+    public static void main(String[] args) {
+        Integer[] arr = {50, 92, 92, 79, 71, 80, 49, 52, 85, 2, 38, 98, 91, 40, 10, 13, 28};
+        new ThreeWayQuickSort().sort(arr);
+        String s = Arrays.toString(arr);
+        System.out.println(s);
     }
 
     public static class ThreeWayQuickSortTest extends SortTestBase {
